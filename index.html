@@ -1,300 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIRI PRINTS 🔥 Mug Printing in Indore | Ready in 45 Minutes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIRI PRINTS 🔥 Mug & Card Printing in Indore | Ready in 45 Minutes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --theme-color: #ff5252;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #222;
+    }
 
-<style>
-  * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
-  body {
-    background: linear-gradient(135deg, #fff3f3, #ffecec);
-    color: #222;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 2px solid #eee;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--theme-color);
+    }
+    .logo-title h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--theme-color);
+    }
+    nav a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: var(--theme-color);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #000;
+    }
 
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header h1 {font-size: 1.4rem; color: #ff6b81;}
-  nav a {text-decoration: none; color: #444; margin: 0 8px; font-weight: 600;}
-  nav a:hover {color: #ff6b81;}
+    /* Offers */
+    .offers {
+      padding: 30px 15px;
+      background: #fff;
+    }
+    .offers h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--theme-color);
+      font-size: 22px;
+    }
+    .offers-scroll {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+    .offer-card {
+      background: #fff;
+      min-width: 230px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .offer-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .offer-card h3 {
+      margin: 5px 0;
+      color: var(--theme-color);
+      font-size: 18px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 8px 0;
+      color: #111;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: var(--theme-color);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #000;
+    }
 
-  .hero {
-    text-align: center;
-    padding: 40px 15px 20px;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    color: white;
-  }
-  .hero h2 {font-size: 1.8rem; margin-bottom: 10px;}
-  .hero p {font-size: 1rem;}
+    /* Gallery */
+    .gallery {
+      padding: 30px 15px;
+      background: #fff;
+    }
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--theme-color);
+      font-size: 22px;
+    }
+    .gallery-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+    .gallery-scroll img {
+      height: 150px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .gallery-scroll img:hover {
+      transform: scale(1.05);
+    }
 
-  /* Quotes animation */
-  #quoteBox {
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    animation: fade 3s infinite;
-  }
-  @keyframes fade {
-    0%,100% {opacity: 0;}
-    50% {opacity: 1;}
-  }
+    /* Cards */
+    .cards {
+      padding: 30px 15px;
+      background: #fff;
+    }
+    .cards h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--theme-color);
+      font-size: 22px;
+    }
+    .cards-scroll {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+    .card-item {
+      background: #fff;
+      min-width: 230px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+    }
+    .card-item img {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .card-item h3 {
+      color: var(--theme-color);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
 
-  /* Offers section */
-  .offers {
-    padding: 30px 10px;
-    text-align: center;
-  }
-  .offers h2 {color: #ff6b81; margin-bottom: 20px;}
-  .offers-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 16px;
-    scroll-snap-type: x mandatory;
-    padding: 0 10px;
-  }
-  .offer-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    min-width: 260px;
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    padding: 10px;
-    text-align: center;
-    transition: 0.3s;
-  }
-  .offer-card:hover {transform: translateY(-5px);}
-  .offer-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-  .offer-card h3 {color: #ff6b81;}
-  .offer-card p {font-size: 0.9rem; margin-bottom: 8px;}
-  .price {font-weight: bold; color: #222;}
-  .btn {
-    display: inline-block;
-    background: linear-gradient(90deg,#ff6b81,#ff8c94);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-  }
-  .btn:hover {background: linear-gradient(90deg,#ff8c94,#ff6b81);}
+    /* Contact */
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+      background: #fdfdfd;
+    }
+    .contact h2 {
+      color: var(--theme-color);
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .contact-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--theme-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .contact-icon:hover {
+      transform: scale(1.1);
+      background: #000;
+    }
 
-  /* Gallery */
-  .gallery {
-    padding: 30px 10px;
-    text-align: center;
-  }
-  .gallery h2 {color: #ff6b81; margin-bottom: 15px;}
-  .gallery-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 12px;
-    padding: 0 10px;
-    scroll-snap-type: x mandatory;
-  }
-  .gallery-scroll img {
-    height: 220px;
-    border-radius: 12px;
-    scroll-snap-align: start;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  .gallery-scroll img:hover {transform: scale(1.05);}
-
-  /* Contact */
-  .contact {
-    text-align: center;
-    padding: 30px 15px;
-    background: #fff7f7;
-  }
-  .contact h2 {color: #ff6b81; margin-bottom: 10px;}
-  .contact p {margin-bottom: 12px;}
-  .contact a {
-    display: inline-block;
-    margin: 6px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    background: linear-gradient(90deg,#ff6b81,#ff8c94);
-    transition: 0.3s;
-  }
-  .contact a:hover {transform: scale(1.05);}
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9rem;
-    background: #fff;
-    color: #555;
-  }
-  footer a {
-    color: #ff6b81;
-    font-weight: 600;
-    text-decoration: none;
-    animation: glow 2s infinite alternate;
-  }
-  @keyframes glow {
-    from {text-shadow: 0 0 5px #ff6b81;}
-    to {text-shadow: 0 0 15px #ff6b81;}
-  }
-
-  /* Popup */
-  #popup {
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.8);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:2000;
-  }
-  #popup img {
-    width:90%;
-    max-width:400px;
-    border-radius:15px;
-    box-shadow:0 0 20px #000;
-  }
-
-  @media (max-width:600px){
-    .offer-card img {height: 180px;}
-    .gallery-scroll img {height: 180px;}
-  }
-</style>
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #13032f;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #daf50e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-  <h1>🖨️ SIRI PRINTS</h1>
+  <div class="logo-title">
+    <img src="logo.png" alt="SIRI PRINTS Logo" class="logo">
+    <h1>SIRI PRINTS</h1>
+  </div>
   <nav>
     <a href="#offers">Offers</a>
+    <a href="#cards">Cards</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Mug Printing in Indore ☕</h2>
-  <p id="quoteBox">Every sip tastes better with your style!</p>
-</section>
-
-<!-- Offers Section -->
+<!-- Mug Section -->
 <section id="offers" class="offers">
-  <h2>🔥 Today's Special Offers 🔥</h2>
+  <h2>🔥 Mug Printing Offers 🔥</h2>
   <div class="offers-scroll">
-
     <div class="offer-card">
-      <img src="mug1 1.jpeg" alt="Single Mug" class="popup-img">
+      <img src="mug1 1.jpeg" alt="Single Mug">
       <h3>Single Mug</h3>
-      <p>Perfect for personal use or gifting if you are Captain's fan!</p>
-      <p class="price">Only ₹149/-</p>
+      <p>Perfect for gifting!</p>
+      <p class="price">₹149/-</p>
       <a href="https://wa.me/919685165987?text=I want Single Mug" class="btn">Order Now</a>
     </div>
-
     <div class="offer-card">
-      <img src="mug 2 pair.JPG" alt="Pair of 2 Mugs" class="popup-img">
+      <img src="mug 2 pair.JPG" alt="Pair Mugs">
       <h3>Pair of 2 Mugs</h3>
-      <p>Best value for couples and gifting.</p>
-      <p class="price">Only ₹220/-</p>
+      <p>Best for couples 💑</p>
+      <p class="price">₹220/-</p>
       <a href="https://wa.me/919685165987?text=I want pair of 2 Mugs" class="btn">Order Now</a>
     </div>
-
     <div class="offer-card">
-      <img src="mug 3 pair.JPG" alt="Pair of 3 Mugs" class="popup-img">
-      <h3>Pair of 3 Mugs</h3>
-      <p>3 mugs • 3 smiles • One amazing offer ✨</p>
-      <p class="price">Only ₹340/-</p>
-      <a href="https://wa.me/919685165987?text=I want pair of 3 Mugs" class="btn">Order Now</a>
+      <img src="mug 3 pair.JPG" alt="3 Mugs">
+      <h3>Pack of 3 Mugs</h3>
+      <p>3 smiles • One offer!</p>
+      <p class="price">₹340/-</p>
+      <a href="https://wa.me/919685165987?text=I want 3 Mugs" class="btn">Order Now</a>
     </div>
+  </div>
+</section>
 
-    <!-- ✨ New Card Advertisement for Digital Invitation Cards ✨ -->
-    <div class="offer-card" style="background: linear-gradient(135deg, #ffdde1, #ee9ca7); color: #fff;">
-      <img src="https://images.unsplash.com/photo-1603574670812-d24560880210?q=80&w=800" alt="Digital Invitation Card" class="popup-img" style="border: 3px solid #fff;">
-      <h3 style="color:#fff;">🎉 Digital Invitation Cards</h3>
-      <p style="color:#fff;">Custom HTML Wedding, Birthday & Event Invitations — beautiful, animated & shareable.</p>
-      <p class="price" style="color:#fff;">Only ₹150/-</p>
-      <a href="https://wa.me/919685165987?text=I want Digital Invitation Card" class="btn" style="background:#fff; color:#ff6b81;">Order Now</a>
+<!-- Card Section -->
+<section id="cards" class="cards">
+  <h2>💌 Digital Invitation Cards 💌</h2>
+  <div class="cards-scroll">
+    <div class="card-item">
+      <img src="card1.png" alt="Birthday Card">
+      <h3>Birthday Invitations</h3>
+      <p>Vibrant and fun digital invites 🎉</p>
+      <p class="price">₹150/-</p>
+      <a href="https://wa.me/919685165987?text=I want Birthday Invitation Card" class="btn">Order Now</a>
     </div>
-    <!-- ✨ End New Advertisement Card ✨ -->
-
+    <div class="card-item">
+      <img src="card2.png" alt="Wedding Card">
+      <h3>Wedding Invitations</h3>
+      <p>Elegant & traditional wedding cards 💍</p>
+      <p class="price">₹150/-</p>
+      <a href="https://wa.me/919685165987?text=I want Wedding Invitation Card" class="btn">Order Now</a>
+    </div>
+    <div class="card-item">
+      <img src="card3.png" alt="Event Card">
+      <h3>Event Invitations</h3>
+      <p>Perfect for ceremonies & parties 🎊</p>
+      <p class="price">₹150/-</p>
+      <a href="https://wa.me/919685165987?text=I want Event Invitation Card" class="btn">Order Now</a>
+    </div>
   </div>
 </section>
 
 <!-- Gallery -->
 <section id="gallery" class="gallery">
-  <h2>📸 Mug Gallery</h2>
+  <h2>📸 Our Gallery</h2>
   <div class="gallery-scroll">
-    <img src="mug gallery 1.jpg" alt="Gallery 1" class="popup-img">
-    <img src="mug gallery 2.jpg" alt="Gallery 2" class="popup-img">
-    <img src="mug gallery 3.jpg" alt="Gallery 3" class="popup-img">
-    <img src="mug gallery 4.jpg" alt="Gallery 4" class="popup-img">
+    <img src="mug1 2.jpeg" alt="Gallery Mug 1">
+    <img src="mug3.png" alt="Gallery Mug 2">
+    <img src="m mug1.png" alt="Gallery Mug 3">
+    <img src="card1.png" alt="Gallery Card 1">
+    <img src="card2.png" alt="Gallery Card 2">
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact" class="contact">
-  <h2>📞 Contact Us</h2>
-  <p>Located at: <b>Indore, Madhya Pradesh</b></p>
-  <a href="tel:+919685165987">📲 Call Us</a>
-  <a href="https://wa.me/919685165987?text=Hi! I want to print a mug">💬 WhatsApp</a>
-  <a href="https://www.instagram.com/siriprints.in" target="_blank">📸 Instagram</a>
-  <a href="https://maps.app.goo.gl/W4GpoSHNg8V3a1qL7" target="_blank">📍 Google Map</a>
+  <h2>Contact Us</h2>
+  <div class="contact-bar">
+    <a href="tel:+919685165987" class="contact-icon" title="Call">📞</a>
+    <a href="https://wa.me/919685165987" class="contact-icon" title="WhatsApp">💬</a>
+    <a href="https://www.instagram.com/siri.prints/" target="_blank" class="contact-icon" title="Instagram">📱</a>
+    <a href="https://maps.app.goo.gl/qXCA4J27wxtp91Bs9" target="_blank" class="contact-icon" title="Location">📍</a>
+  </div>
 </section>
 
 <footer>
-  🐝 Developed by <a href="https://www.instagram.com/beecodeworld" target="_blank">@beecodeworld</a>
+  <p>
+    Developer <a href="https://www.instagram.com/beecodeworld/" target="_blank">🐝 BEE CODE WORLD</a>
+  </p>
 </footer>
 
-<!-- Popup Modal -->
-<div id="popup"><img src="" alt="Preview"></div>
-
+<!-- Dynamic Theme Script -->
 <script>
-  // Quotes Rotator
-  const quotes = [
-    "Every sip tastes better with your style!",
-    "Print your memories on mugs ☕",
-    "Mugs that speak your emotions 💖",
-    "Your photo + our print = Perfect Gift 🎁"
-  ];
-  let qIndex = 0;
-  setInterval(() => {
-    document.getElementById("quoteBox").textContent = quotes[qIndex];
-    qIndex = (qIndex + 1) % quotes.length;
-  }, 3500);
-
-  // Popup viewer
-  const popup = document.getElementById("popup");
-  const popupImg = popup.querySelector("img");
-  document.querySelectorAll(".popup-img").forEach(img => {
-    img.addEventListener("click", () => {
-      popup.style.display = "flex";
-      popupImg.src = img.src;
-    });
-  });
-  popup.addEventListener("click", () => popup.style.display = "none");
+const colors = ['#ff5252','#ff7b00','#0099ff','#4caf50','#9c27b0','#e91e63','#ff4081','#fdd835'];
+const theme = colors[Math.floor(Math.random() * colors.length)];
+document.documentElement.style.setProperty('--theme-color', theme);
 </script>
 
 </body>
