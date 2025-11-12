@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIRI PRINTS 🔥 Mug Printing in Indore | Ready in 45 Minutes</title>
+
+<style>
+  * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+  body {
+    background: linear-gradient(135deg, #fff3f3, #ffecec);
+    color: #222;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {font-size: 1.4rem; color: #ff6b81;}
+  nav a {text-decoration: none; color: #444; margin: 0 8px; font-weight: 600;}
+  nav a:hover {color: #ff6b81;}
+
+  .hero {
+    text-align: center;
+    padding: 40px 15px 20px;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: white;
+  }
+  .hero h2 {font-size: 1.8rem; margin-bottom: 10px;}
+  .hero p {font-size: 1rem;}
+
+  /* Quotes animation */
+  #quoteBox {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    animation: fade 3s infinite;
+  }
+  @keyframes fade {
+    0%,100% {opacity: 0;}
+    50% {opacity: 1;}
+  }
+
+  /* Offers section */
+  .offers {
+    padding: 30px 10px;
+    text-align: center;
+  }
+  .offers h2 {color: #ff6b81; margin-bottom: 20px;}
+  .offers-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding: 0 10px;
+  }
+  .offer-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-width: 260px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .offer-card:hover {transform: translateY(-5px);}
+  .offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .offer-card h3 {color: #ff6b81;}
+  .offer-card p {font-size: 0.9rem; margin-bottom: 8px;}
+  .price {font-weight: bold; color: #222;}
+  .btn {
+    display: inline-block;
+    background: linear-gradient(90deg,#ff6b81,#ff8c94);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn:hover {background: linear-gradient(90deg,#ff8c94,#ff6b81);}
+
+  /* Gallery */
+  .gallery {
+    padding: 30px 10px;
+    text-align: center;
+  }
+  .gallery h2 {color: #ff6b81; margin-bottom: 15px;}
+  .gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 10px;
+    scroll-snap-type: x mandatory;
+  }
+  .gallery-scroll img {
+    height: 220px;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .gallery-scroll img:hover {transform: scale(1.05);}
+
+  /* Contact */
+  .contact {
+    text-align: center;
+    padding: 30px 15px;
+    background: #fff7f7;
+  }
+  .contact h2 {color: #ff6b81; margin-bottom: 10px;}
+  .contact p {margin-bottom: 12px;}
+  .contact a {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(90deg,#ff6b81,#ff8c94);
+    transition: 0.3s;
+  }
+  .contact a:hover {transform: scale(1.05);}
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    background: #fff;
+    color: #555;
+  }
+  footer a {
+    color: #ff6b81;
+    font-weight: 600;
+    text-decoration: none;
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    from {text-shadow: 0 0 5px #ff6b81;}
+    to {text-shadow: 0 0 15px #ff6b81;}
+  }
+
+  /* Popup */
+  #popup {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+  }
+  #popup img {
+    width:90%;
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 0 20px #000;
+  }
+
+  @media (max-width:600px){
+    .offer-card img {height: 180px;}
+    .gallery-scroll img {height: 180px;}
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🖨️ SIRI PRINTS</h1>
+  <nav>
+    <a href="#offers">Offers</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Mug Printing in Indore ☕</h2>
+  <p id="quoteBox">Every sip tastes better with your style!</p>
+</section>
+
+<!-- Offers Section -->
+<section id="offers" class="offers">
+  <h2>🔥 Today's Special Offers 🔥</h2>
+  <div class="offers-scroll">
+
+    <div class="offer-card">
+      <img src="mug1 1.jpeg" alt="Single Mug" class="popup-img">
+      <h3>Single Mug</h3>
+      <p>Perfect for personal use or gifting if you are Captain's fan!</p>
+      <p class="price">Only ₹149/-</p>
+      <a href="https://wa.me/919685165987?text=I want Single Mug" class="btn">Order Now</a>
+    </div>
+
+    <div class="offer-card">
+      <img src="mug 2 pair.JPG" alt="Pair of 2 Mugs" class="popup-img">
+      <h3>Pair of 2 Mugs</h3>
+      <p>Best value for couples and gifting.</p>
+      <p class="price">Only ₹220/-</p>
+      <a href="https://wa.me/919685165987?text=I want pair of 2 Mugs" class="btn">Order Now</a>
+    </div>
+
+    <div class="offer-card">
+      <img src="mug 3 pair.JPG" alt="Pair of 3 Mugs" class="popup-img">
+      <h3>Pair of 3 Mugs</h3>
+      <p>3 mugs • 3 smiles • One amazing offer ✨</p>
+      <p class="price">Only ₹340/-</p>
+      <a href="https://wa.me/919685165987?text=I want pair of 3 Mugs" class="btn">Order Now</a>
+    </div>
+
+    <!-- ✨ New Card Advertisement for Digital Invitation Cards ✨ -->
+    <div class="offer-card" style="background: linear-gradient(135deg, #ffdde1, #ee9ca7); color: #fff;">
+      <img src="https://images.unsplash.com/photo-1603574670812-d24560880210?q=80&w=800" alt="Digital Invitation Card" class="popup-img" style="border: 3px solid #fff;">
+      <h3 style="color:#fff;">🎉 Digital Invitation Cards</h3>
+      <p style="color:#fff;">Custom HTML Wedding, Birthday & Event Invitations — beautiful, animated & shareable.</p>
+      <p class="price" style="color:#fff;">Only ₹150/-</p>
+      <a href="https://wa.me/919685165987?text=I want Digital Invitation Card" class="btn" style="background:#fff; color:#ff6b81;">Order Now</a>
+    </div>
+    <!-- ✨ End New Advertisement Card ✨ -->
+
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery">
+  <h2>📸 Mug Gallery</h2>
+  <div class="gallery-scroll">
+    <img src="mug gallery 1.jpg" alt="Gallery 1" class="popup-img">
+    <img src="mug gallery 2.jpg" alt="Gallery 2" class="popup-img">
+    <img src="mug gallery 3.jpg" alt="Gallery 3" class="popup-img">
+    <img src="mug gallery 4.jpg" alt="Gallery 4" class="popup-img">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>📞 Contact Us</h2>
+  <p>Located at: <b>Indore, Madhya Pradesh</b></p>
+  <a href="tel:+919685165987">📲 Call Us</a>
+  <a href="https://wa.me/919685165987?text=Hi! I want to print a mug">💬 WhatsApp</a>
+  <a href="https://www.instagram.com/siriprints.in" target="_blank">📸 Instagram</a>
+  <a href="https://maps.app.goo.gl/W4GpoSHNg8V3a1qL7" target="_blank">📍 Google Map</a>
+</section>
+
+<footer>
+  🐝 Developed by <a href="https://www.instagram.com/beecodeworld" target="_blank">@beecodeworld</a>
+</footer>
+
+<!-- Popup Modal -->
+<div id="popup"><img src="" alt="Preview"></div>
+
+<script>
+  // Quotes Rotator
+  const quotes = [
+    "Every sip tastes better with your style!",
+    "Print your memories on mugs ☕",
+    "Mugs that speak your emotions 💖",
+    "Your photo + our print = Perfect Gift 🎁"
+  ];
+  let qIndex = 0;
+  setInterval(() => {
+    document.getElementById("quoteBox").textContent = quotes[qIndex];
+    qIndex = (qIndex + 1) % quotes.length;
+  }, 3500);
+
+  // Popup viewer
+  const popup = document.getElementById("popup");
+  const popupImg = popup.querySelector("img");
+  document.querySelectorAll(".popup-img").forEach(img => {
+    img.addEventListener("click", () => {
+      popup.style.display = "flex";
+      popupImg.src = img.src;
+    });
+  });
+  popup.addEventListener("click", () => popup.style.display = "none");
+</script>
+
+</body>
+</html>
